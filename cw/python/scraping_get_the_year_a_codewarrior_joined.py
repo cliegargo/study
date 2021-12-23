@@ -3,7 +3,6 @@
 
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
-import re
 
 
 def get_member_since(username):
