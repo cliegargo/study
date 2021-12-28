@@ -4,7 +4,6 @@
 
 std::vector<std::string> get_pins(std::string observed) {
 	std::map<char, std::vector<std::string>> adj = {
-		{'0', {"8", "0"}},
 		{'1', {"1", "2", "4"}},
 		{'2', {"1", "2", "3", "5"}},
 		{'3', {"2", "3", "6"}},
@@ -13,7 +12,8 @@ std::vector<std::string> get_pins(std::string observed) {
 		{'6', {"3", "5", "6", "9"}},
 		{'7', {"4", "7", "8"}},
 		{'8', {"5", "7", "8", "9", "0"}},
-		{'9', {"6", "8", "9"}}
+		{'9', {"6", "8", "9"}},
+		{'0', {"8", "0"}}
 	};
 
 	std::vector<std::string> possible;
@@ -38,13 +38,12 @@ std::vector<std::string> get_pins(std::string observed) {
 	    		}
 	    		a.push_back(b);
 	    		b = "";
-	    		//putchar('\n');
 	    	}
 	    }
 
 		for(int i = 0; i < a.size(); ++i) {
 			for(int j = 0; j < a[i].size(); ++j) {
-				std::cout << a[i][j] << '\t';
+				std::cout << i << ':' << j << '\t' << a[i][j] << '\n';
 			}
 			putchar('\n');
 		}
