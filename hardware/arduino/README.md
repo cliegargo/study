@@ -1,3 +1,3 @@
 # Arduino
 
-```sudo usermod -a -G dialout clint```
+```sudo usermod -a -G dialout $USER```
