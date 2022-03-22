@@ -1,0 +1,111 @@
+class VigenereCipher:
+    def __init__(self, key, abc):
+        self.key = key
+        self.alphabet = abc
+
+        if len(self.key) != len(text):
+            for i in range(len(text)):
+                self.key += self.key[i]
+
+        self.key = self.key[0:len(text)]
+
+    def encode(self, text):
+        #"""
+        letters = {
+            'a': 97, 'b': 98, 'c': 99, 'd': 100, 'e': 101, 'f': 102, 'g': 103,
+            'h': 104, 'i': 105, 'j': 106, 'k': 107, 'l': 108, 'm': 109,
+            'n': 110, 'o': 111, 'p': 112, 'q': 113, 'r': 114, 's': 115,
+            't': 116, 'u': 117, 'v': 118, 'w': 119, 'x': 120, 'y': 121, 'z': 122
+        }
+
+        """
+        letters = {
+            'a': 0, 'b': 1, 'c': 2, 'd': 3, 'e': 4, 'f': 5, 'g': 6,
+            'h': 7, 'i': 8, 'j': 9, 'k': 10, 'l': 11, 'm': 12,
+            'n': 13, 'o': 14, 'p': 15, 'q': 16, 'r': 17, 's': 18,
+            't': 19, 'u': 20, 'v': 21, 'w': 22, 'x': 23, 'y': 24, 'z': 25
+        }
+        """
+
+
+        xpos = [letters.get(c) if c in letters.keys() else 26 for c in text]
+        ypos = [letters.get(c) if c in letters.keys() else 26 for c in self.key]
+
+        print(chr(xpos[0] + ypos[0]))
+        print(ypos)
+
+        encoded = ''
+
+        print(chr(xpos[0] + ypos[0]))
+
+        for i in range(len(xpos)):
+            if text[i] in letters.keys():
+                if xpos[i] + ypos[i] > 122:
+                    encoded += chr(int(xpos[i] + ypos[i]) - 97)
+                else:
+                    encoded += chr(int(xpos[i] + ypos[i]))
+            else:
+                encoded += text[i]
+        return encoded
+
+        """
+        encoded = ''
+
+        #for i in range(len(xpos)):
+        #    print(xpos[i], '\t+\t', ypos[i], '\t=\t', (xpos[i] + ypos[i]), '\t|\t', letters.get(xpos[i] + ypos[i]))
+
+
+        for i in range(len(text)):
+            if text[i] in letters.keys():
+                pos = xpos[i] + ypos[i]
+                if pos > 122:
+                    #encoded += chr(letters.get(chr((xpos[i] + ypos[i]) - 26)))
+                    while pos > 122:
+                        pos -= 26
+                    encoded += chr(letters.get(chr(pos)))
+
+                else:
+                    #encoded += chr(letters.get(chr(xpos[i] + ypos[i])))
+                    pass
+            else:
+                encoded += text[i]
+
+        return encoded
+        """
+
+
+
+    def decode(self, text):
+        """
+        xpos = [letters.get(c) if c in letters.keys() else 26 for c in text]
+        ypos = [letters.get(c) if c in letters.keys() else 26 for c in self.key]
+
+
+        decoded = ''
+
+        for i in range(len(text)):
+            if letters.get(text[i]) in letters.keys():
+                print(letters.get(text[i]))
+            else:
+                print(text[i])
+        """
+        pass
+
+
+
+
+
+
+if __name__ == '__main__':
+
+    key = 'password'
+    abc = 'abcdefghijklmnopqrstuvwxyz'
+    text = 'codewars'#"it's a shift cipher!"
+
+    VAC = VigenereCipher(key, abc)
+
+    encoded = VAC.encode(text)
+    print(f'Encode:\t{encoded}')
+
+    #decoded = VAC.decode(encoded)
+    #print(decoded)
