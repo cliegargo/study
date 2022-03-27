@@ -11,6 +11,6 @@ Solving programming problems.
 
 
 
-![codewars](https://www.codewars.com/users/cliegargo/badges/micro)
+[![codewars](https://www.codewars.com/users/cliegargo/badges/micro)](https://www.codewars.com/users/cliegargo)
 
-![projecteuler](https://projecteuler.net/profile/927cl.png)
+[![projecteuler](https://projecteuler.net/profile/927cl.png)](https://projecteuler.net/profile/927cl.png)
