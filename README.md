@@ -1,5 +1,5 @@
 # study
-Solving programming problems.
+study
 
 
 
@@ -9,6 +9,7 @@ Solving programming problems.
 * [Programming by Doing](https://github.com/cliegargo/study/tree/master/programmingbydoing)
 * [Project Euler](https://github.com/cliegargo/study/tree/master/projecteuler)
 * [Rust](https://github.com/cliegargo/study/tree/master/rust)
+
 
 
 
