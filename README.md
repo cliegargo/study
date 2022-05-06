@@ -13,6 +13,6 @@ study
 
 
 
-[![codewars](https://www.codewars.com/users/cliegargo/badges/micro)](https://www.codewars.com/users/cldd/badges/micro)
+[![codewars](https://www.codewars.com/users/cldd/badges/micro)](https://www.codewars.com/users/cldd/badges/micro)
 
 [![projecteuler](https://projecteuler.net/profile/927cl.png)](https://projecteuler.net/profile/927cl.png)
