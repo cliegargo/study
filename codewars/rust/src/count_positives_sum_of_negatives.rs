@@ -1,7 +1,5 @@
 // https://www.codewars.com/kata/576bb71bbbcf0951d5000044/train/rust
 
-use std::io;
-
 fn count_positives_sum_negatives(input: Vec<i32>) -> Vec<i32> {
 	let pstv: usize = input.iter()
 		.map(|&x| x as i32)
