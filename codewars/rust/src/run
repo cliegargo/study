@@ -1,7 +1,0 @@
-#!/usr/bin/env sh
-
-if [ $1 ]; then
-	rustc $1 -o a.out && ./a.out
-else
-	rustup docs --book
-fi
